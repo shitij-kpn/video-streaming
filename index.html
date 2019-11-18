@@ -3,13 +3,37 @@
     <title>Video stream sample</title>
   </head>
   <style>
-    video{
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 10px;
+    }
+
+    .container{
+      background-image: linear-gradient(to right bottom,rgb(236, 125, 125),rgb(255, 88, 77));
       height: 100vh;
+      width: auto;
+      position: relative;
+    }
+
+    video{
+      height: 40rem;
+      width: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
     }
   </style>
   <body>
-    <video id="videoPlayer" controls autoplay> 
-      <source src="http://localhost:3000/video" type="video/mp4">
-    </video>
+    <div class="container">
+      <video id="videoPlayer" controls autoplay> 
+        <source src="http://localhost:3000/video" type="video/mp4">
+      </video>
+    </div>
   </body>
 </html>
